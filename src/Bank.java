@@ -69,8 +69,8 @@ public class Bank {
 
             // Check to make sure it's unique
             noUnique = false;
-            for (User u : this.users) {
-                if(uuid.compareTo(u.getUUID()) == 0){
+            for (Account a : this.accounts) {
+                if(uuid.compareTo(a.getUUID()) == 0){
                     noUnique = true;
                     break;
                 }

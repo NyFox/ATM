@@ -29,4 +29,10 @@ public class Account {
 
     }
 
+    // Get the account ID
+    // return uuid
+    public String getUUID(){
+        return this.uuid;
+    }
+
 }
