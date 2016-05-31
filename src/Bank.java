@@ -84,8 +84,25 @@ public class Bank {
     }
 
     // add an account
+
     public void addAccount(Account anAcct){
         this.accounts.add(anAcct);
     }
+
+    public User addUser(String firstName, String lastName, String pin){
+
+        // create a new User object and add it to out list
+        User newUser = new User(firstName, lastName, pin, this);
+        this.users.add(newUser);
+
+        // create a savings account for the user
+        Account newAccount = new Account("Savings", newUser, this);
+        newUser.addAccount(newAccount);
+        this.addAccount(newAccount);
+
+        return newUser;
+
+    }
+
 
 }

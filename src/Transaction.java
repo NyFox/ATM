@@ -10,6 +10,12 @@ public class Transaction {
     private String memo;
     private Account inAccount;
 
+
+    /**
+     * Create new transaction
+     * amount  the amount transacted
+     * inAccount the account the transaction belongs to
+     */
     public Transaction(double amount, Account inAccount){
 
         this.amount = amount;
@@ -19,6 +25,12 @@ public class Transaction {
 
     }
 
+    /**
+     * Create new transaction
+     * amount  the amount transacted
+     * memo the memo for transaction
+     * inAccount the account the transaction belongs to
+     */
     public Transaction(double amount, String memo, Account inAccount){
 
         // call the two-arg constructor first
