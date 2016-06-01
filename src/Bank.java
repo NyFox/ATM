@@ -11,9 +11,9 @@ public class Bank {
     private ArrayList<Account> accounts;
 
 
-    // Generate a new, universal unique ID for the user
-    // return uuid
-
+    /** Generate a new, universal unique ID for the user
+     * return uuid
+     */
     public String getNewUserUUID(){
 
         //inits
@@ -47,9 +47,9 @@ public class Bank {
 
     }
 
-    // Generate a new, universal unique ID for an account
-    // return uuid
-
+    /** Generate a new, universal unique ID for an account
+     * return uuid
+     */
     public String getNewAccountUUID(){
 
         //inits
@@ -84,7 +84,6 @@ public class Bank {
     }
 
     // add an account
-
     public void addAccount(Account anAcct){
         this.accounts.add(anAcct);
     }
