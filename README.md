@@ -1,3 +1,2 @@
 # ATM
-Простая реализация банка :moneybag: :dollar: :credit_card:
-Проект ещё пишеться :D :pill:
+ Simple implementation a bank ATM interface :pill: :moneybag: :dollar: :credit_card:
