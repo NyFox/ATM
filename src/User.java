@@ -68,4 +68,27 @@ public class User {
 
         return false;
     }
+
+    /**
+     * Return the user's first name.
+     * @return the first name
+     */
+    public String getFirstName(){
+       return this.firstName;
+    }
+
+    /**
+     * Print summaries for the accounts of this user.
+     */
+    public void printAccountsSummary(){
+
+        System.out.printf("\n\n%s's accounts summary", this.firstName);
+        for(int a = 0; a < this.accounts.size(); a++){
+            System.out.printf("%d) %s\n", a + 1,
+                    this.accounts.get(a).getSummaryLine());
+        }
+        System.out.println();
+
+    }
+
 }
