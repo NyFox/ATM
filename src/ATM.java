@@ -147,6 +147,49 @@ public class ATM {
 
     public static void transferFunds(User theUser, Scanner sc){
 
+        // units
+        int fromAcct;
+        int toAcct;
+        double amount;
+        double acctBal;
+
+        // get the account to transfer from
+        do {
+            System.out.printf("Enter the number (1-%d) of the account \n" +
+            "to transfer from: ");
+            fromAcct = sc.nextInt()-1;
+            if(fromAcct < 0 || fromAcct >= theUser.numAccounts()){
+                System.out.println("Invalid account. Please try again.");
+            }
+        } while (fromAcct < 0 || fromAcct >= theUser.numAccounts());
+        acctBal = theUser.getAcctBalance(fromAcct);
+
+        // get the account to transfer to // TODO: 03.06.2016
+        do {
+            System.out.printf("Enter the number (1-%d) of the account \n" +
+                    "to transfer to: ");
+            toAcct = sc.nextInt()-1;
+            if(toAcct < 0 || toAcct >= theUser.numAccounts()){
+                System.out.println("Invalid account. Please try again.");
+            }
+        } while (toAcct < 0 || toAcct >= theUser.numAccounts());
+
+        // get the amount to transfer
+        do{
+            System.out.printf("Enter the amount to transfer (max $%.02f): $", acctBal);
+            amount = sc.nextDouble();
+            if(amount < 0){
+                System.out.println("Amount must be greater that zero.");
+            } else if(amount > acctBal){
+                System.out.printf("Amount must not be greater that\n" +
+                "balance of $%.02f.\n", acctBal);
+            }
+        } while (amount < 0 || amount > acctBal);
+
+        // finally, do the transfer
+
+
+
     }
 
 
