@@ -120,7 +120,11 @@ public class ATM {
         }
     }
 
-
+    /**
+     * Show the transaction history for a account
+     * @param theUser the logged in User object
+     * @param sc the Scanner object used for user input
+     */
     public static void showTransHistory(User theUser, Scanner sc){
 
         int theAcct;
@@ -130,8 +134,18 @@ public class ATM {
             System.out.printf("Enter the number (1-%d) of the account" +
                     " whose transactions you want to see: ",
                     theUser.numAccounts());
+            theAcct = sc.nextInt() - 1;
+            if(theAcct < 0 || theAcct >= theUser.numAccounts()){
+                System.out.println("Invalid account. Please try again.");
+            }
+        } while (theAcct < 0 || theAcct >= theUser.numAccounts());
 
-        } while ();
+        // print transaction history
+        theUser.printAcctTransHistory(theAcct);
+
+    }
+
+    public static void transferFunds(User theUser, Scanner sc){
 
     }
 

@@ -91,4 +91,21 @@ public class User {
 
     }
 
+    /**
+     * Get the number of accounts of the user
+     * @return the number of accounts
+     */
+    public int numAccounts(){
+        return this.accounts.size();
+    }
+
+
+    /**
+     * Print transaction history for a particular account.
+     * @param acctIdx the index of the account to use
+     */
+    public void printAcctTransHistory(int acctIdx){
+        this.accounts.get(acctIdx).printTransHistory();
+    }
+
 }
