@@ -102,11 +102,11 @@ public class ATM {
                 break;
 
             case 2:
-                ATM.withdrawlFunds(theUser, sc);
+               // ATM.withdrawlFunds(theUser, sc); // function  not worked!
                 break;
 
             case 3:
-                ATM.depositFunds(theUser, sc);
+                //ATM.depositFunds(theUser, sc); function not worked!
                 break;
 
             case 4:
@@ -191,8 +191,6 @@ public class ATM {
                 "Transfer to account %s", theUser.getAcctUUID(toAcct)));
         theUser.addAcctTransaction(toAcct, amount, String.format(
                 "Transfer to account %s", theUser.getAcctUUID(fromAcct)));
-
-
 
 
 

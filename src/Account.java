@@ -69,7 +69,6 @@ public class Account {
         return balance;
     }
 
-
     /**
      * Print the transaction history of the account
      */
@@ -80,6 +79,19 @@ public class Account {
             System.out.printf(this.transactions.get(t).getSummaryLine());
         }
         System.out.println();
+    }
+
+    /**
+     * Add a new transaction in this account
+     * @param amount the amount transacted
+     * @param memo the transaction memo
+     */
+    public void addTransaction(double amount, String memo){
+
+        // create new transaction object and add it to our list
+        Transaction newTrans = new Transaction(amount, memo, this);
+        this.transactions.add(newTrans);
+
     }
 
 }
