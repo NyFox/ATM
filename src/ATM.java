@@ -10,10 +10,10 @@ public class ATM {
         Scanner sc = new Scanner(System.in);
 
         // init Bank
-        Bank theBank = new Bank("Сбербанк"); // very cool russian bank :DD
+        Bank theBank = new Bank("Sberbank"); // very cool russian bank :DD
 
         // add a user, which also creates a savings account
-        User aUser = theBank.addUser("Stas", "Lis", "437485");
+        User aUser = theBank.addUser("John", "Anderson", "89638559944");
 
         // add a checking account for our user
         Account newAccount = new Account("Checking", aUser, theBank);
